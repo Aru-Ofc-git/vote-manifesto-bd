@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সাইদুর রহমান রায়হান | বকসি মিয়াজী যুব ও ক্রীড়া সংঘ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <div class="nav-logo-ball"><i class="fas fa-futbol"></i></div>
+                <span class="nav-logo-text">Rayhan</span>
+            </a>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active"><i class="fas fa-home"></i> হোম</a>
+                <a href="#about" class="nav-link"><i class="fas fa-user"></i> সম্পর্কে</a>
+                <a href="#manifesto" class="nav-link"><i class="fas fa-scroll"></i> ইসতেহার</a>
+                <a href="#contact" class="nav-link"><i class="fas fa-address-card"></i> যোগাযোগ</a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div id="mobile-menu">
+            <a href="#hero"><i class="fas fa-home"></i> হোম</a>
+            <a href="#about"><i class="fas fa-user"></i> সম্পর্কে</a>
+            <a href="#manifesto"><i class="fas fa-scroll"></i> ইসতেহার</a>
+            <a href="#contact"><i class="fas fa-address-card"></i> যোগাযোগ</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-stripe"></div>
+        <div class="hero-img-container">
+            <img src="./assets/image.jpeg" alt="Rayhan" class="hero-img"
+                onerror="this.parentElement.style.display='none'">
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="hero-badge-dot"></div>
+                <span class="hero-badge-text"><i class="fas fa-users"></i> বকসি মিয়াজী যুব ও ক্রীড়া সংঘ &nbsp;·&nbsp;
+                    প্রতীক: <i class="fas fa-futbol"></i> ফুটবল &nbsp;·&nbsp; কোষাধ্যক্ষ প্রার্থী</span>
+            </div>
+            <div>
+                <div class="hero-vote"><em>VOTE</em> FOR</div>
+                <div class="hero-name">RAYHAN</div>
+            </div>
+            <p class="hero-tagline">ডিজিটাল নিরাপত্তা বিশেষজ্ঞ। জাতীয় টেক অ্যাওয়ার্ড প্রাপ্ত তরুণ নেতা।<br>স্বচ্ছতা,
+                জবাবদিহিতা ও আধুনিক সংগঠনের প্রতিশ্রুতি।</p>
+            <div class="hero-actions">
+                <a href="#manifesto" class="btn-primary"><span><i class="fas fa-list-ul"></i> ২০ দফা
+                        ইসতেহার</span><span><i class="fas fa-arrow-right"></i></span></a>
+                <a href="#about" class="btn-secondary"><span><i class="fas fa-info-circle"></i> রায়হানকে
+                        জানুন</span></a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="hero-stat-label"><i class="fas fa-shield-alt"></i> সাইবার হিরো</div>
+                    <div class="hero-stat-value">জেলা ১ম</div>
+                </div>
+                <div>
+                    <div class="hero-stat-label"><i class="fas fa-trophy"></i> জাতীয় পুরস্কার</div>
+                    <div class="hero-stat-value">২০২৪</div>
+                </div>
+                <div>
+                    <div class="hero-stat-label"><i class="fas fa-check-circle"></i> প্রতিশ্রুতি</div>
+                    <div class="hero-stat-value">২০ দফা</div>
+                </div>
+                <div>
+                    <div class="hero-stat-label"><i class="fas fa-futbol"></i> প্রতীক</div>
+                    <div class="hero-stat-value">ফুটবল</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span class="marquee-item"><i class="fas fa-futbol"></i> VOTE FOR RAYHAN <span
+                    class="marquee-sep">—</span></span>
+            <span class="marquee-item"><i class="fas fa-flag"></i> ফুটবল প্রতীক <span
+                    class="marquee-sep">—</span></span>
+            <span class="marquee-item"><i class="fas fa-users"></i> বকসি মিয়াজী যুব ও ক্রীড়া সংঘ <span
+                    class="marquee-sep">—</span></span>
+            <span class="marquee-item"><i class="fas fa-balance-scale"></i> স্বচ্ছতা &amp; জবাবদিহিতা <span
+                    class="marquee-sep">—</span></span>
+            <span class="marquee-item"><i class="fas fa-futbol"></i> VOTE FOR RAYHAN <span
+                    class="marquee-sep">—</span></span>
+            <span class="marquee-item"><i class="fas fa-flag"></i> ফুটবল প্রতীক <span
+                    class="marquee-sep">—</span></span>
+            <span class="marquee-item"><i class="fas fa-users"></i> বকসি মিয়াজী যুব ও ক্রীড়া সংঘ <span
+                    class="marquee-sep">—</span></span>
+            <span class="marquee-item"><i class="fas fa-balance-scale"></i> স্বচ্ছতা &amp; জবাবদিহিতা <span
+                    class="marquee-sep">—</span></span>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-img-wrap reveal-left">
+                    <div class="about-img-frame">
+                        <img src="./assets/image.jpeg" alt="Saidur Rahman Rayhan"
+                            onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22533%22><rect fill=%22%23e8e0d0%22 width=%22400%22 height=%22533%22/><text x=%22200%22 y=%22267%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2240%22>RD</text></svg>'">
+                        <div class="about-img-badge"><span class="badge-num"><i class="fas fa-calendar-alt"></i>
+                                ২০২৬</span><span class="badge-text">কোষাধ্যক্ষ</span></div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="section-label"><i class="fas fa-vote-yea"></i> কোষাধ্যক্ষ প্রার্থী</div>
+                    <h2 class="about-title">সাইদুর রহমান<br><span class="gold">রায়হান </span></h2>
+                    <p class="about-body">ফেনী ইউনিভার্সিটির <strong>কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং
+                            (CSE)</strong> বিভাগের শিক্ষার্থী। পড়াশোনার পাশাপাশি তিনি একজন নিবেদিতপ্রাণ সমাজসেবক ও তরুণ
+                        সংগঠক হিসেবে সুপরিচিত। <strong>"নোয়াখালী সাইবার ওয়ারিয়র্স"</strong>-এর প্রতিষ্ঠাতা পরিচালক
+                        হিসেবে সাইবার সচেতনতা বৃদ্ধি, ডিজিটাল নিরাপত্তা নিশ্চিতকরণ এবং তরুণদের প্রযুক্তিতে দক্ষ করে
+                        তুলতে নিরলসভাবে কাজ করে যাচ্ছেন।</p>
+                    <p class="about-body"><strong>"নিরাপদ সড়ক চাই"</strong> নোয়াখালী জেলা শাখার সাংগঠনিক সম্পাদক এবং
+                        জেলা প্রশাসনের অধীনে কিশোর-কিশোরী সাইবার অপরাধ প্রতিরোধ জেলা কমিটির সক্রিয় সদস্য হিসেবে দায়িত্ব
+                        পালন করছেন।</p>
+                    <p class="about-body">তার কাজের স্বীকৃতিস্বরূপ ২০২২ সালে সারাদেশব্যাপী <strong>"সাইবার
+                            হিরো"</strong> প্রতিযোগিতায় নোয়াখালীতে ১ম এবং জাতীয়ভাবে ২২তম স্থান অর্জন করেন। একই বছরে তিনি
+                        নোয়াখালী জেলার <strong>সেরা উদীয়মান ভলেন্টিয়ার</strong> পুরস্কার লাভ করেন এবং ২০২৪ সালে অর্জন
+                        করেন সম্মানজনক <strong>"ন্যাশনাল টেক অ্যাওয়ার্ড"</strong>।</p>
+                    <p class="about-body">বর্তমানে তিনি বকসি মিয়াজী যুব ও ক্রীড়া সংঘের কোষাধ্যক্ষ পদে
+                        <strong>"ফুটবল"</strong> প্রতীক নিয়ে নির্বাচনে অংশগ্রহণ করছেন। স্বচ্ছতা, জবাবদিহিতা এবং আধুনিক
+                        ডিজিটাল আর্থিক ব্যবস্থাপনা নিশ্চিত করার লক্ষ্য নিয়ে তিনি কাজ করতে প্রতিশ্রুতিবদ্ধ। সদস্যদের
+                        আস্থা অর্জন করে একটি শক্তিশালী, সংগঠিত ও উন্নত সংগঠন গড়ে তোলাই তাঁর মূল লক্ষ্য।</p>
+                    <p class="about-body">প্রযুক্তিনির্ভর নিরাপদ সমাজ গঠন এবং তরুণদের ইতিবাচক পথে এগিয়ে নেওয়ার প্রত্যয়ে
+                        সাইদুর রহমান রায়হান এগিয়ে যাচ্ছেন নিরলসভাবে।</p>
+                    <div class="award-chips">
+                        <span class="award-chip"><span class="chip-icon"><i class="fas fa-trophy"></i></span> ন্যাশনাল
+                            টেক অ্যাওয়ার্ড ২০২৪</span>
+                        <span class="award-chip"><span class="chip-icon"><i class="fas fa-shield-virus"></i></span>
+                            সাইবার হিরো — জেলা ১ম</span>
+                        <span class="award-chip"><span class="chip-icon"><i class="fas fa-globe"></i></span> জাতীয়
+                            ২২তম</span>
+                        <span class="award-chip"><span class="chip-icon"><i class="fas fa-road"></i></span> নিরাপদ সড়ক
+                            চাই</span>
+                        <span class="award-chip"><span class="chip-icon"><i class="fas fa-futbol"></i></span> ফুটবল
+                            প্রতীক</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="manifesto">
+        <div class="section-inner">
+            <div class="manifesto-header">
+                <div class="reveal-left">
+                    <div class="section-label" style="color:var(--gold);"><i class="fas fa-scroll"></i> নির্বাচনী
+                        ইসতেহার ২০২৬</div>
+                    <div class="manifesto-title">নির্বাচনী<br><span class="outline">ইসতেহার</span></div>
+                </div>
+                <div class="reveal-right">
+                    <div class="manifesto-count"><i class="fas fa-list-ol"></i> ২০</div>
+                    <p class="manifesto-subtitle">বকসি মিয়াজী যুব ও ক্রীড়া সংঘের উন্নয়নে ২০টি সুনির্দিষ্ট,
+                        বাস্তবায়নযোগ্য অঙ্গীকার। প্রতিটি প্রতিশ্রুতি পালনে আমি প্রতিজ্ঞাবদ্ধ।</p>
+                </div>
+            </div>
+            <div class="timeline-wrap">
+                <div class="timeline-col left">
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">০১</span><span class="tl-icon"><i
+                                        class="fas fa-check-circle"></i></span><span class="tl-title">স্বচ্ছ আর্থিক
+                                    ব্যবস্থাপনা</span></div>
+                            <div class="tl-desc">সকল আয়-ব্যয়ের হিসাব নিয়মিত লিপিবদ্ধ ও সদস্যদের জন্য উন্মুক্ত রাখা
+                                হবে।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">০৩</span><span class="tl-icon"><i
+                                        class="fas fa-calendar-alt"></i></span><span class="tl-title">মাসিক ও বার্ষিক
+                                    রিপোর্ট</span></div>
+                            <div class="tl-desc">প্রতি মাসে আয়-ব্যয় এবং প্রতি বছর পূর্ণাঙ্গ আর্থিক প্রতিবেদন প্রকাশ।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">০৫</span><span class="tl-icon"><i
+                                        class="fas fa-chart-bar"></i></span><span class="tl-title">উন্নয়নমূলক
+                                    বাজেট</span></div>
+                            <div class="tl-desc">খেলাধুলা, শিক্ষা ও সামাজিক উন্নয়নের জন্য নির্দিষ্ট বাজেট নির্ধারণ।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">০৭</span><span class="tl-icon"><i
+                                        class="fas fa-hand-holding-medical"></i></span><span class="tl-title">জরুরি
+                                    সহায়তা তহবিল</span></div>
+                            <div class="tl-desc">দরিদ্র ও অসহায় সদস্যদের জন্য জরুরি সহায়তা তহবিল গঠন।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">০৯</span><span class="tl-icon"><i
+                                        class="fas fa-hard-hat"></i></span><span class="tl-title">মাঠ ও অবকাঠামো
+                                    উন্নয়ন</span></div>
+                            <div class="tl-desc">খেলার মাঠ ও সংঘের স্থাপনার উন্নয়নে কার্যকর উদ্যোগ।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১১</span><span class="tl-icon"><i
+                                        class="fas fa-broom"></i></span><span class="tl-title">পরিচ্ছন্ন এলাকা</span>
+                            </div>
+                            <div class="tl-desc">প্রতি শুক্রবার সাপ্তাহিক পরিষ্কার-পরিচ্ছন্নতা কার্যক্রম।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১৩</span><span class="tl-icon"><i
+                                        class="fas fa-hospital-alt"></i></span><span class="tl-title">স্বাস্থ্যসেবা
+                                    কার্যক্রম</span></div>
+                            <div class="tl-desc">প্রতি মাসে হেলথ ক্যাম্প ও ফ্রি ব্লাড টেস্টসহ প্রাথমিক স্বাস্থ্যসেবা।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১৫</span><span class="tl-icon"><i
+                                        class="fas fa-ban"></i></span><span class="tl-title">মাদক বিরোধী সচেতনতা</span>
+                            </div>
+                            <div class="tl-desc">যুব সমাজকে মাদক ও অপরাধ থেকে দূরে রাখতে নিয়মিত কার্যক্রম।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১৭</span><span class="tl-icon"><i
+                                        class="fas fa-star"></i></span><span class="tl-title">মেধাবী খেলোয়াড়
+                                    উন্নয়ন</span></div>
+                            <div class="tl-desc">প্রতিভাবান খেলোয়াড়দের খুঁজে বের করে তাদের উন্নয়নে বিশেষ উদ্যোগ।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১৯</span><span class="tl-icon"><i
+                                        class="fas fa-search-dollar"></i></span><span class="tl-title">অডিট
+                                    ব্যবস্থা</span></div>
+                            <div class="tl-desc">প্রতি বছর নিরপেক্ষ অডিটের মাধ্যমে হিসাব যাচাই।</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-spine"></div>
+                <div class="timeline-col right">
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">০২</span><span class="tl-icon"><i
+                                        class="fas fa-globe"></i></span><span class="tl-title">ডিজিটাল হিসাব
+                                    ব্যবস্থা</span></div>
+                            <div class="tl-desc">অনলাইন প্ল্যাটফর্মে সকল আয়-ব্যয়ের হিসাব প্রকাশ।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">০৪</span><span class="tl-icon"><i
+                                        class="fas fa-clipboard-list"></i></span><span class="tl-title">জবাবদিহিতা
+                                    বোর্ড</span></div>
+                            <div class="tl-desc">আরজু ভাইয়ের দোকান প্রাঙ্গণে স্থায়ী জবাবদিহিতা বোর্ড স্থাপন।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">০৬</span><span class="tl-icon"><i
+                                        class="fas fa-handshake"></i></span><span class="tl-title">ফান্ড সংগ্রহ ও
+                                    স্পন্সরশিপ</span></div>
+                            <div class="tl-desc">NGO, দানশীল প্রতিষ্ঠান ও ব্যক্তিদের কাছ থেকে স্পন্সরশিপ ও ফান্ড সংগ্রহ।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">০৮</span><span class="tl-icon"><i
+                                        class="fas fa-trash-alt"></i></span><span class="tl-title">দুর্নীতি ও অপচয়
+                                    রোধ</span></div>
+                            <div class="tl-desc">সংঘের অর্থ ব্যবহারে কোনো অনিয়ম বা অপচয় বরদাস্ত করা হবে না।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১০</span><span class="tl-icon"><i
+                                        class="fas fa-shield-alt"></i></span><span class="tl-title">নিরাপত্তা
+                                    ব্যবস্থা</span></div>
+                            <div class="tl-desc">রাত্রীকালীন নিরাপত্তায় ২ জন সিকিউরিটি গার্ড নিয়োগ ও স্থায়ী ফান্ড
+                                গঠন।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১২</span><span class="tl-icon"><i
+                                        class="fas fa-paint-brush"></i></span><span class="tl-title">সৌন্দর্য ও
+                                    সচেতনতা</span></div>
+                            <div class="tl-desc">দেয়াল ও প্রবেশপথে গ্রাফিতি ও নীতিবাক্য অংকনের মাধ্যমে সৌন্দর্য বৃদ্ধি।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১৪</span><span class="tl-icon"><i
+                                        class="fas fa-heart"></i></span><span class="tl-title">মানবিক সহায়তা</span>
+                            </div>
+                            <div class="tl-desc">দরিদ্রদের সহায়তা, রক্তদান কর্মসূচি, শীতবস্ত্র বিতরণসহ বিভিন্ন উদ্যোগ।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১৬</span><span class="tl-icon"><i
+                                        class="fas fa-medal"></i></span><span class="tl-title">খেলাধুলার উন্নয়ন</span>
+                            </div>
+                            <div class="tl-desc">প্রশিক্ষিত কোচ নিয়োগ, নিয়মিত টুর্নামেন্ট ও প্র্যাকটিসের ব্যবস্থা।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">১৮</span><span class="tl-icon"><i
+                                        class="fas fa-database"></i></span><span class="tl-title">ডিজিটাল ও ঐতিহ্য
+                                    সংরক্ষণ</span></div>
+                            <div class="tl-desc">সংঘের নিজস্ব ওয়েবসাইটে এলাকার ইতিহাস ও কার্যক্রম তুলে ধরা।</div>
+                        </div>
+                    </div>
+                    <div class="tl-item right-item">
+                        <div class="tl-inner">
+                            <div class="tl-header"><span class="tl-num">২০</span><span class="tl-icon"><i
+                                        class="fas fa-piggy-bank"></i></span><span class="tl-title">সেভিংস
+                                    প্ল্যান</span></div>
+                            <div class="tl-desc">নিয়মিত ছোট অংকের চাঁদা সংগ্রহ করে সংগঠনের জন্য বড় ফান্ড তৈরি।</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-inner">
+            <div class="contact-grid">
+                <div>
+                    <div class="section-label" style="color:var(--gold);"><i class="fas fa-phone-alt"></i> যোগাযোগ করুন
+                    </div>
+                    <h2 class="contact-title reveal">আসুন<br><span class="gold">এগিয়ে আসুন।</span></h2>
+                    <p class="contact-sub reveal">স্বেচ্ছাসেবক হোন, অনুদান দিন অথবা আপনার মতামত জানান। আপনার কণ্ঠই
+                        আমাদের শক্তি।</p>
+                    <div class="reveal">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <div class="contact-info-label">ইমেইল</div>
+                                <div class="contact-info-value">rayhansaidurrahman@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <div class="contact-info-label">ফোন</div>
+                                <div class="contact-info-value">+880 1983-945051</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <div class="contact-info-label">ঠিকানা</div>
+                                <div class="contact-info-value">Joy Kisnorampur, Pouro Bazar, Al Farook Academy,
+                                    Maijdee, Noakhali</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="section-label" style="color:rgba(255,255,255,0.4); margin-bottom:1.5rem;"><i
+                            class="fas fa-hashtag"></i> সোশ্যাল মিডিয়া</div>
+                    <div class="social-grid">
+                        <a href="https://facebook.com/thesaidurrayhanofficial" target="_blank" class="social-card fb">
+                            <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+                            <div class="social-platform">Facebook</div>
+                            <div class="social-handle">@thesaidurrayhanofficial</div>
+                        </a>
+                        <a href="https://www.instagram.com/thesaidurrahman" target="_blank" class="social-card ig">
+                            <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="social-platform">Instagram</div>
+                            <div class="social-handle">@thesaidurrahman</div>
+                        </a>
+                        <a href="#" target="_blank" class="social-card tt">
+                            <div class="social-icon"><i class="fab fa-tiktok"></i></div>
+                            <div class="social-platform">TikTok</div>
+                            <div class="social-handle"></div>
+                        </a>
+                        <a href="https://m.me/thesaidurrayhanofficial" target="_blank" class="social-card ms">
+                            <div class="social-icon"><i class="fab fa-facebook-messenger"></i></div>
+                            <div class="social-platform">Messenger</div>
+                            <div class="social-handle">@thesaidurrayhanofficial</div>
+                        </a>
+                    </div>
+                    <div class="social-cta"><a href="https://m.me/thesaidurrayhanofficial" target="_blank"><span><i
+                                    class="fab fa-facebook-messenger"></i></span><span>মেসেঞ্জারে চ্যাট
+                                করুন</span><span><i class="fas fa-arrow-right"></i></span></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">VOTE FOR <span>RAYHAN</span> <i class="fas fa-futbol"></i></div>
+                <div class="footer-copy" style="margin-top:0.5rem;">বকসি মিয়াজী যুব ও ক্রীড়া সংঘ • ফুটবল প্রতীক</div>
+            </div>
+            <div class="footer-copy" id="copyrightText"></div>
+            <div class="footer-brand" style="margin-top:0.5rem; font-size:0.8rem; opacity:0.7;">Developed by <span><a
+                        style="color:var(--gold); text-decoration: none;" href="https://www.facebook.com/1R13A14"
+                        target="_blank"><i class="fas fa-code"></i> Ariful Islam Arman</a></span></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
