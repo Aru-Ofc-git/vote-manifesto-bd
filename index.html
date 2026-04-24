@@ -16,10 +16,11 @@
 </head>
 
 <body>
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
+    <!-- NAVBAR -->
     <nav id="navbar">
         <div class="nav-inner">
             <a href="#hero" class="nav-logo">
@@ -29,7 +30,7 @@
             <div class="nav-links">
                 <a href="#hero" class="nav-link active"><i class="fas fa-home"></i> হোম</a>
                 <a href="#about" class="nav-link"><i class="fas fa-user"></i> সম্পর্কে</a>
-                <a href="#manifesto" class="nav-link"><i class="fas fa-scroll"></i> ইসতেহার</a>
+                <a href="#manifesto" class="nav-link"><i class="fas fa-scroll"></i> ইশতেহার</a>
                 <a href="#contact" class="nav-link"><i class="fas fa-address-card"></i> যোগাযোগ</a>
             </div>
             <button class="mobile-toggle" id="mobileToggle">
@@ -39,11 +40,12 @@
         <div id="mobile-menu">
             <a href="#hero"><i class="fas fa-home"></i> হোম</a>
             <a href="#about"><i class="fas fa-user"></i> সম্পর্কে</a>
-            <a href="#manifesto"><i class="fas fa-scroll"></i> ইসতেহার</a>
+            <a href="#manifesto"><i class="fas fa-scroll"></i> ইশতেহার</a>
             <a href="#contact"><i class="fas fa-address-card"></i> যোগাযোগ</a>
         </div>
     </nav>
 
+    <!-- HERO -->
     <section id="hero">
         <div class="hero-bg"></div>
         <div class="hero-stripe"></div>
@@ -53,24 +55,35 @@
         </div>
 
         <div class="hero-content">
-            <div class="hero-badge">
+            <div class="hero-badge" id="heroBadge">
                 <div class="hero-badge-dot"></div>
                 <span class="hero-badge-text"><i class="fas fa-users"></i> বকসি মিয়াজী যুব ও ক্রীড়া সংঘ &nbsp;·&nbsp;
                     প্রতীক: <i class="fas fa-futbol"></i> ফুটবল &nbsp;·&nbsp; কোষাধ্যক্ষ প্রার্থী</span>
             </div>
-            <div>
-                <div class="hero-vote"><em>VOTE</em> FOR</div>
+
+            <div id="heroText">
+                <div class="hero-vote">
+                    <em>VOTE</em> FOR
+                </div>
                 <div class="hero-name">RAYHAN</div>
             </div>
-            <p class="hero-tagline">ডিজিটাল নিরাপত্তা বিশেষজ্ঞ। জাতীয় টেক অ্যাওয়ার্ড প্রাপ্ত তরুণ নেতা।<br>স্বচ্ছতা,
-                জবাবদিহিতা ও আধুনিক সংগঠনের প্রতিশ্রুতি।</p>
-            <div class="hero-actions">
-                <a href="#manifesto" class="btn-primary"><span><i class="fas fa-list-ul"></i> ২০ দফা
-                        ইসতেহার</span><span><i class="fas fa-arrow-right"></i></span></a>
-                <a href="#about" class="btn-secondary"><span><i class="fas fa-info-circle"></i> রায়হানকে
-                        জানুন</span></a>
+
+            <p class="hero-tagline" id="heroTagline">
+                ডিজিটাল নিরাপত্তা বিশেষজ্ঞ। জাতীয় টেক অ্যাওয়ার্ড প্রাপ্ত তরুণ নেতা।<br>স্বচ্ছতা, জবাবদিহিতা ও আধুনিক
+                সংগঠনের প্রতিশ্রুতি।
+            </p>
+
+            <div class="hero-actions" id="heroActions">
+                <a href="#manifesto" class="btn-primary">
+                    <span><i class="fas fa-list-ul"></i> ২০ দফা ইশতেহার</span>
+                    <span><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#about" class="btn-secondary">
+                    <span><i class="fas fa-info-circle"></i> রায়হানকে জানুন</span>
+                </a>
             </div>
-            <div class="hero-stats">
+
+            <div class="hero-stats" id="heroStats">
                 <div>
                     <div class="hero-stat-label"><i class="fas fa-shield-alt"></i> সাইবার হিরো</div>
                     <div class="hero-stat-value">জেলা ১ম</div>
@@ -91,6 +104,7 @@
         </div>
     </section>
 
+    <!-- MARQUEE -->
     <div class="marquee-section">
         <div class="marquee-track">
             <span class="marquee-item"><i class="fas fa-futbol"></i> VOTE FOR RAYHAN <span
@@ -112,6 +126,7 @@
         </div>
     </div>
 
+    <!-- ABOUT -->
     <section id="about">
         <div class="section-inner">
             <div class="about-grid">
@@ -119,10 +134,13 @@
                     <div class="about-img-frame">
                         <img src="./assets/image.jpeg" alt="Saidur Rahman Rayhan"
                             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22533%22><rect fill=%22%23e8e0d0%22 width=%22400%22 height=%22533%22/><text x=%22200%22 y=%22267%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2240%22>RD</text></svg>'">
-                        <div class="about-img-badge"><span class="badge-num"><i class="fas fa-calendar-alt"></i>
-                                ২০২৬</span><span class="badge-text">কোষাধ্যক্ষ</span></div>
+                        <div class="about-img-badge">
+                            <span class="badge-num"><i class="fas fa-calendar-alt"></i> ২০২৬</span>
+                            <span class="badge-text">কোষাধ্যক্ষ</span>
+                        </div>
                     </div>
                 </div>
+
                 <div class="reveal-right">
                     <div class="section-label"><i class="fas fa-vote-yea"></i> কোষাধ্যক্ষ প্রার্থী</div>
                     <h2 class="about-title">সাইদুর রহমান<br><span class="gold">রায়হান </span></h2>
@@ -161,13 +179,17 @@
         </div>
     </section>
 
+    <!-- MANIFESTO — TIMELINE -->
     <section id="manifesto">
         <div class="section-inner">
             <div class="manifesto-header">
                 <div class="reveal-left">
                     <div class="section-label" style="color:var(--gold);"><i class="fas fa-scroll"></i> নির্বাচনী
-                        ইসতেহার ২০২৬</div>
-                    <div class="manifesto-title">নির্বাচনী<br><span class="outline">ইসতেহার</span></div>
+                        ইশতেহার ২০২৬</div>
+                    <div class="manifesto-title">
+                        নির্বাচনী<br>
+                        <span class="outline">ইশতেহার</span>
+                    </div>
                 </div>
                 <div class="reveal-right">
                     <div class="manifesto-count"><i class="fas fa-list-ol"></i> ২০</div>
@@ -175,9 +197,11 @@
                         বাস্তবায়নযোগ্য অঙ্গীকার। প্রতিটি প্রতিশ্রুতি পালনে আমি প্রতিজ্ঞাবদ্ধ।</p>
                 </div>
             </div>
-            <div class="timeline-wrap">
-                <div class="timeline-col left">
-                    <div class="tl-item">
+
+            <div class="timeline-wrap" id="timelineWrap">
+                <!-- LEFT COLUMN — odd items (desktop) -->
+                <div class="timeline-col left" id="timelineLeft">
+                    <div class="tl-item" data-order="01">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">০১</span><span class="tl-icon"><i
                                         class="fas fa-check-circle"></i></span><span class="tl-title">স্বচ্ছ আর্থিক
@@ -186,7 +210,7 @@
                                 হবে।</div>
                         </div>
                     </div>
-                    <div class="tl-item">
+                    <div class="tl-item" data-order="03">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">০৩</span><span class="tl-icon"><i
                                         class="fas fa-calendar-alt"></i></span><span class="tl-title">মাসিক ও বার্ষিক
@@ -195,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tl-item">
+                    <div class="tl-item" data-order="05">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">০৫</span><span class="tl-icon"><i
                                         class="fas fa-chart-bar"></i></span><span class="tl-title">উন্নয়নমূলক
@@ -204,7 +228,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tl-item">
+                    <div class="tl-item" data-order="07">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">০৭</span><span class="tl-icon"><i
                                         class="fas fa-hand-holding-medical"></i></span><span class="tl-title">জরুরি
@@ -212,7 +236,7 @@
                             <div class="tl-desc">দরিদ্র ও অসহায় সদস্যদের জন্য জরুরি সহায়তা তহবিল গঠন।</div>
                         </div>
                     </div>
-                    <div class="tl-item">
+                    <div class="tl-item" data-order="09">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">০৯</span><span class="tl-icon"><i
                                         class="fas fa-hard-hat"></i></span><span class="tl-title">মাঠ ও অবকাঠামো
@@ -220,7 +244,7 @@
                             <div class="tl-desc">খেলার মাঠ ও সংঘের স্থাপনার উন্নয়নে কার্যকর উদ্যোগ।</div>
                         </div>
                     </div>
-                    <div class="tl-item">
+                    <div class="tl-item" data-order="11">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১১</span><span class="tl-icon"><i
                                         class="fas fa-broom"></i></span><span class="tl-title">পরিচ্ছন্ন এলাকা</span>
@@ -228,7 +252,7 @@
                             <div class="tl-desc">প্রতি শুক্রবার সাপ্তাহিক পরিষ্কার-পরিচ্ছন্নতা কার্যক্রম।</div>
                         </div>
                     </div>
-                    <div class="tl-item">
+                    <div class="tl-item" data-order="13">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১৩</span><span class="tl-icon"><i
                                         class="fas fa-hospital-alt"></i></span><span class="tl-title">স্বাস্থ্যসেবা
@@ -237,7 +261,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tl-item">
+                    <div class="tl-item" data-order="15">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১৫</span><span class="tl-icon"><i
                                         class="fas fa-ban"></i></span><span class="tl-title">মাদক বিরোধী সচেতনতা</span>
@@ -245,7 +269,7 @@
                             <div class="tl-desc">যুব সমাজকে মাদক ও অপরাধ থেকে দূরে রাখতে নিয়মিত কার্যক্রম।</div>
                         </div>
                     </div>
-                    <div class="tl-item">
+                    <div class="tl-item" data-order="17">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১৭</span><span class="tl-icon"><i
                                         class="fas fa-star"></i></span><span class="tl-title">মেধাবী খেলোয়াড়
@@ -254,7 +278,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tl-item">
+                    <div class="tl-item" data-order="19">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১৯</span><span class="tl-icon"><i
                                         class="fas fa-search-dollar"></i></span><span class="tl-title">অডিট
@@ -263,9 +287,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="timeline-spine"></div>
-                <div class="timeline-col right">
-                    <div class="tl-item right-item">
+
+                <!-- CENTRE SPINE (desktop) -->
+                <div class="timeline-spine" id="timelineSpine"></div>
+
+                <!-- RIGHT COLUMN — even items (desktop) -->
+                <div class="timeline-col right" id="timelineRight">
+                    <div class="tl-item right-item" data-order="02">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">০২</span><span class="tl-icon"><i
                                         class="fas fa-globe"></i></span><span class="tl-title">ডিজিটাল হিসাব
@@ -273,7 +301,7 @@
                             <div class="tl-desc">অনলাইন প্ল্যাটফর্মে সকল আয়-ব্যয়ের হিসাব প্রকাশ।</div>
                         </div>
                     </div>
-                    <div class="tl-item right-item">
+                    <div class="tl-item right-item" data-order="04">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">০৪</span><span class="tl-icon"><i
                                         class="fas fa-clipboard-list"></i></span><span class="tl-title">জবাবদিহিতা
@@ -281,7 +309,7 @@
                             <div class="tl-desc">আরজু ভাইয়ের দোকান প্রাঙ্গণে স্থায়ী জবাবদিহিতা বোর্ড স্থাপন।</div>
                         </div>
                     </div>
-                    <div class="tl-item right-item">
+                    <div class="tl-item right-item" data-order="06">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">০৬</span><span class="tl-icon"><i
                                         class="fas fa-handshake"></i></span><span class="tl-title">ফান্ড সংগ্রহ ও
@@ -290,7 +318,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tl-item right-item">
+                    <div class="tl-item right-item" data-order="08">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">০৮</span><span class="tl-icon"><i
                                         class="fas fa-trash-alt"></i></span><span class="tl-title">দুর্নীতি ও অপচয়
@@ -298,7 +326,7 @@
                             <div class="tl-desc">সংঘের অর্থ ব্যবহারে কোনো অনিয়ম বা অপচয় বরদাস্ত করা হবে না।</div>
                         </div>
                     </div>
-                    <div class="tl-item right-item">
+                    <div class="tl-item right-item" data-order="10">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১০</span><span class="tl-icon"><i
                                         class="fas fa-shield-alt"></i></span><span class="tl-title">নিরাপত্তা
@@ -307,7 +335,7 @@
                                 গঠন।</div>
                         </div>
                     </div>
-                    <div class="tl-item right-item">
+                    <div class="tl-item right-item" data-order="12">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১২</span><span class="tl-icon"><i
                                         class="fas fa-paint-brush"></i></span><span class="tl-title">সৌন্দর্য ও
@@ -316,7 +344,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tl-item right-item">
+                    <div class="tl-item right-item" data-order="14">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১৪</span><span class="tl-icon"><i
                                         class="fas fa-heart"></i></span><span class="tl-title">মানবিক সহায়তা</span>
@@ -325,7 +353,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tl-item right-item">
+                    <div class="tl-item right-item" data-order="16">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১৬</span><span class="tl-icon"><i
                                         class="fas fa-medal"></i></span><span class="tl-title">খেলাধুলার উন্নয়ন</span>
@@ -334,7 +362,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tl-item right-item">
+                    <div class="tl-item right-item" data-order="18">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">১৮</span><span class="tl-icon"><i
                                         class="fas fa-database"></i></span><span class="tl-title">ডিজিটাল ও ঐতিহ্য
@@ -342,7 +370,7 @@
                             <div class="tl-desc">সংঘের নিজস্ব ওয়েবসাইটে এলাকার ইতিহাস ও কার্যক্রম তুলে ধরা।</div>
                         </div>
                     </div>
-                    <div class="tl-item right-item">
+                    <div class="tl-item right-item" data-order="20">
                         <div class="tl-inner">
                             <div class="tl-header"><span class="tl-num">২০</span><span class="tl-icon"><i
                                         class="fas fa-piggy-bank"></i></span><span class="tl-title">সেভিংস
@@ -355,15 +383,20 @@
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
         <div class="section-inner">
             <div class="contact-grid">
                 <div>
-                    <div class="section-label" style="color:var(--gold);"><i class="fas fa-phone-alt"></i> যোগাযোগ করুন
-                    </div>
-                    <h2 class="contact-title reveal">আসুন<br><span class="gold">এগিয়ে আসুন।</span></h2>
+                    <div class="section-label" style="color:var(--gold);" class="reveal"><i
+                            class="fas fa-phone-alt"></i> যোগাযোগ করুন</div>
+                    <h2 class="contact-title reveal">
+                        আসুন<br>
+                        <span class="gold">এগিয়ে আসুন।</span>
+                    </h2>
                     <p class="contact-sub reveal">স্বেচ্ছাসেবক হোন, অনুদান দিন অথবা আপনার মতামত জানান। আপনার কণ্ঠই
                         আমাদের শক্তি।</p>
+
                     <div class="reveal">
                         <div class="contact-info-item">
                             <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
@@ -382,13 +415,14 @@
                         <div class="contact-info-item">
                             <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
-                                <div class="contact-info-label">ঠিকানা</div>
+                                <div class="contact-info-label">প্রচারণা কেন্দ্র</div>
                                 <div class="contact-info-value">Joy Kisnorampur, Pouro Bazar, Al Farook Academy,
                                     Maijdee, Noakhali</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="reveal-right">
                     <div class="section-label" style="color:rgba(255,255,255,0.4); margin-bottom:1.5rem;"><i
                             class="fas fa-hashtag"></i> সোশ্যাল মিডিয়া</div>
@@ -414,27 +448,32 @@
                             <div class="social-handle">@thesaidurrayhanofficial</div>
                         </a>
                     </div>
-                    <div class="social-cta"><a href="https://m.me/thesaidurrayhanofficial" target="_blank"><span><i
-                                    class="fab fa-facebook-messenger"></i></span><span>মেসেঞ্জারে চ্যাট
-                                করুন</span><span><i class="fas fa-arrow-right"></i></span></a></div>
+                    <div class="social-cta">
+                        <a href="https://m.me/thesaidurrayhanofficial" target="_blank">
+                            <span><i class="fab fa-facebook-messenger"></i></span>
+                            <span>মেসেঞ্জারে চ্যাট করুন</span>
+                            <span><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="footer-inner">
             <div>
                 <div class="footer-brand">VOTE FOR <span>RAYHAN</span> <i class="fas fa-futbol"></i></div>
                 <div class="footer-copy" style="margin-top:0.5rem;">বকসি মিয়াজী যুব ও ক্রীড়া সংঘ • ফুটবল প্রতীক</div>
             </div>
-            <div class="footer-copy" id="copyrightText"></div>
+            <div class="footer-copy"><i class="far fa-copyright"></i> ২০২৬ রায়হান ক্যাম্পেইন। সর্বস্বত্ব সংরক্ষিত।
+            </div>
             <div class="footer-brand" style="margin-top:0.5rem; font-size:0.8rem; opacity:0.7;">Developed by <span><a
                         style="color:var(--gold); text-decoration: none;" href="https://www.facebook.com/1R13A14"
                         target="_blank"><i class="fas fa-code"></i> Ariful Islam Arman</a></span></div>
         </div>
     </footer>
-
     <script src="js/main.js"></script>
 </body>
 
