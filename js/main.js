@@ -1,68 +1,17 @@
 (function () {
-  "use strict";
-
-  // ========== DYNAMIC COPYRIGHT YEAR ==========
-  // Automatically updates footer copyright with current year in English
-  const copyrightEl = document.getElementById("copyrightText");
-  if (copyrightEl) {
-    const currentYear = new Date().getFullYear();
-    copyrightEl.innerHTML = `<i class="far fa-copyright"></i> ${currentYear} Rayhan Campaign. All Rights Reserved.`;
-  }
-
-  // ========== CUSTOM CURSOR ==========
-  const cursor = document.getElementById("cursor");
-  const cursorRing = document.getElementById("cursorRing");
-  let mouseX = 0,
-    mouseY = 0;
-  let ringX = 0,
-    ringY = 0;
-
-  document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.left = mouseX + "px";
-    cursor.style.top = mouseY + "px";
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    cursorRing.style.left = ringX + "px";
-    cursorRing.style.top = ringY + "px";
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  // Cursor hover effects on interactive elements
-  document.querySelectorAll("a, button").forEach((el) => {
-    el.addEventListener("mouseenter", () => {
-      cursor.style.width = "20px";
-      cursor.style.height = "20px";
-      cursorRing.style.transform = "translate(-50%, -50%) scale(1.5)";
-    });
-    el.addEventListener("mouseleave", () => {
-      cursor.style.width = "12px";
-      cursor.style.height = "12px";
-      cursorRing.style.transform = "translate(-50%, -50%) scale(1)";
-    });
-  });
-
-  // ========== SCROLL PROGRESS & NAVBAR ==========
+  // Scroll progress
   window.addEventListener("scroll", () => {
     const scrolled =
       window.scrollY / (document.body.scrollHeight - window.innerHeight);
     document.getElementById("scrollProgress").style.transform =
       `scaleX(${scrolled})`;
 
-    // Navbar background on scroll
-    const navbar = document.getElementById("navbar");
     if (window.scrollY > 80) {
-      navbar.classList.add("scrolled");
+      document.getElementById("navbar").classList.add("scrolled");
     } else {
-      navbar.classList.remove("scrolled");
+      document.getElementById("navbar").classList.remove("scrolled");
     }
 
-    // Active nav link highlighting based on visible section
     const sections = ["hero", "about", "manifesto", "contact"];
     sections.forEach((id) => {
       const el = document.getElementById(id);
@@ -78,7 +27,7 @@
     });
   });
 
-  // ========== SMOOTH SCROLL ==========
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
       const id = a.getAttribute("href");
@@ -91,13 +40,77 @@
     });
   });
 
-  // ========== MOBILE MENU TOGGLE ==========
+  // Mobile toggle
   document.getElementById("mobileToggle").addEventListener("click", () => {
     const menu = document.getElementById("mobile-menu");
     menu.style.display = menu.style.display === "block" ? "none" : "block";
   });
 
-  // ========== INTERSECTION OBSERVER FOR REVEAL ANIMATIONS ==========
+  // ============================================
+  // MANIFESTO ORDER FIX FOR MOBILE
+  // Reorder items by data-order only on mobile
+  // ============================================
+  function reorderTimelineForMobile() {
+    const timelineWrap = document.getElementById("timelineWrap");
+    const timelineSpine = document.getElementById("timelineSpine");
+
+    if (window.innerWidth <= 768) {
+      // Collect ALL tl-items from both columns
+      const allItems = timelineWrap.querySelectorAll(".tl-item");
+      const itemsArray = Array.from(allItems);
+
+      // Sort by data-order
+      itemsArray.sort((a, b) => {
+        return (
+          parseInt(a.getAttribute("data-order")) -
+          parseInt(b.getAttribute("data-order"))
+        );
+      });
+
+      // Move all items directly into timeline-wrap in correct order
+      itemsArray.forEach((item) => {
+        timelineWrap.appendChild(item);
+      });
+
+      // Hide the columns and spine
+      const leftCol = document.getElementById("timelineLeft");
+      const rightCol = document.getElementById("timelineRight");
+      if (leftCol) leftCol.style.display = "none";
+      if (rightCol) rightCol.style.display = "none";
+      if (timelineSpine) timelineSpine.style.display = "none";
+    } else {
+      // DESKTOP: Restore items to their original columns
+      const leftCol = document.getElementById("timelineLeft");
+      const rightCol = document.getElementById("timelineRight");
+
+      if (leftCol && rightCol && timelineSpine) {
+        leftCol.style.display = "";
+        rightCol.style.display = "";
+        timelineSpine.style.display = "";
+
+        // Move items back to their original columns based on data-order
+        const allItems = timelineWrap.querySelectorAll(".tl-item");
+        allItems.forEach((item) => {
+          const order = parseInt(item.getAttribute("data-order"));
+          if (order % 2 === 1) {
+            // Odd -> left column
+            leftCol.appendChild(item);
+          } else {
+            // Even -> right column
+            rightCol.appendChild(item);
+          }
+        });
+      }
+    }
+  }
+
+  // Run on load
+  reorderTimelineForMobile();
+
+  // Run on resize
+  window.addEventListener("resize", reorderTimelineForMobile);
+
+  // Intersection Observer
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -106,12 +119,10 @@
     },
     { threshold: 0.1 },
   );
-
   document
     .querySelectorAll(".reveal, .reveal-left, .reveal-right")
     .forEach((el) => observer.observe(el));
 
-  // Separate observer for timeline items (triggers once)
   const tlObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -123,8 +134,28 @@
     },
     { threshold: 0.15 },
   );
-
   document
     .querySelectorAll(".tl-item")
     .forEach((item) => tlObserver.observe(item));
+
+  // Hero entrance
+  const heroElements = [
+    { el: "#heroBadge", delay: 0.2 },
+    { el: "#heroText", delay: 0.5 },
+    { el: "#heroTagline", delay: 0.8 },
+    { el: "#heroActions", delay: 1.0 },
+    { el: "#heroStats", delay: 1.2 },
+  ];
+  heroElements.forEach(({ el, delay }) => {
+    const element = document.querySelector(el);
+    if (element) {
+      element.style.opacity = "0";
+      element.style.transform = "translateY(30px)";
+      setTimeout(() => {
+        element.style.transition = "all 0.9s cubic-bezier(0.16, 1, 0.3, 1)";
+        element.style.opacity = "1";
+        element.style.transform = "translateY(0)";
+      }, delay * 1000);
+    }
+  });
 })();
